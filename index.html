@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Triagem e Diagnóstico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Lado esquerdo: paciente + enfermeiro -->
+    <div class="left-panel">
+      <section class="patient-ui">
+        <h2>Selecione o Sintoma</h2>
+        <div class="symptom-buttons">
+          <button data-sintoma="Dor forte">💗 Dor forte</button>
+          <button data-sintoma="Dificuldade para respirar">💀 Dificuldade para respirar</button>
+          <button data-sintoma="Febre alta">🥵 Febre alta</button>
+          <button data-sintoma="Enjoo/Vômito">🤯 Enjoo/Vômito</button>
+          <button data-sintoma="Tosse/Dor de garganta">🤒 Tosse/Dor de garganta</button>
+        </div>
+        <label for="nivelSintoma">Nível do sintoma: <span id="nivelValor">5</span></label>
+        <input type="range" id="nivelSintoma" min="0" max="10" value="5">
+      </section>
+
+      <section class="nurse-ui">
+        <h2>Dados da Triagem</h2>
+        <div class="field-row">
+          <label>Temperatura (°C): <input type="number" id="temp" step="0.1"></label>
+          <label>Glicose (mg/dL): <input type="number" id="glicose"></label>
+        </div>
+        <div class="field-row">
+          <label>Saturação (%): <input type="number" id="saturacao"></label>
+          <label>Pressão (mmHg): <input type="text" id="pressao" placeholder="120/80"></label>
+        </div>
+        <label for="obsEnfermeiro">Observações do enfermeiro:</label>
+        <textarea id="obsEnfermeiro" rows="4"></textarea>
+        <button id="btnEnviar">Enviar para Médico</button>
+      </section>
+    </div>
+
+    <!-- Lado direito: médico -->
+    <div class="right-panel">
+      <h2>Diagnóstico</h2>
+      <div id="resultado" class="resultado">
+        <em>Aguardando envio...</em>
+      </div>
+      <div class="action-buttons">
+        <button id="btnDescartar">Descartar</button>
+        <button id="btnArquivar">Arquivar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

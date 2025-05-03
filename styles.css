@@ -1,0 +1,135 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background: #f5f6fa;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Painel esquerdo */
+  .left-panel {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+  }
+  
+  .patient-ui,
+  .nurse-ui {
+    margin-bottom: 30px;
+  }
+  
+  .patient-ui h2,
+  .nurse-ui h2,
+  .right-panel h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+  }
+  
+  .symptom-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  
+  .symptom-buttons button {
+    flex: 1 1 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  
+  .symptom-buttons button:hover,
+  .symptom-buttons button.active {
+    background: #e1f5fe;
+  }
+  
+  #nivelSintoma {
+    width: 100%;
+    margin: 10px 0 20px;
+  }
+  
+  /* Campos de triagem */
+  .field-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .field-row label {
+    flex: 1;
+  }
+  
+  .nurse-ui textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+  }
+  
+  /* Botão enviar */
+  #btnEnviar {
+    width: 100%;
+    padding: 10px;
+    background: #2e86de;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Painel direito */
+  .right-panel {
+    width: 35%;
+    padding: 20px;
+    background: #fafafa;
+  }
+  
+  .resultado {
+    min-height: 60%;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .action-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #btnDescartar {
+    background: #e74c3c;
+    color: #fff;
+  }
+  
+  #btnArquivar {
+    background: #27ae60;
+    color: #fff;
+  }
+  
